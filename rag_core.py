@@ -11,8 +11,8 @@ y llama a safe_answer_query() por cada petición.
 
 import os
 # Modelos ya en caché → offline evita cuelgues de red al importar/cargar.
-os.environ["HF_HUB_OFFLINE"] = "1"
-os.environ["TRANSFORMERS_OFFLINE"] = "1"
+os.environ["HF_HUB_OFFLINE"] = "0"
+os.environ["TRANSFORMERS_OFFLINE"] = "0"
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 import json, re, sys, time
