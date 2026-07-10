@@ -1,0 +1,33 @@
+# ── CREDENCIALES — NUNCA subir al repo ──
+.env
+*.key
+
+# ── Entorno virtual (se recrea con requirements.txt) ──
+rag_demo_env/
+venv/
+.venv/
+
+# ── PDFs fuente: pesados y solo necesarios para re-ingestar, no en runtime ──
+data/pdfs/
+
+# ── Python ──
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# ── Logs y temporales ──
+logs/
+*.log
+*.sqlite3-wal
+*.sqlite3-shm
+
+# ── Sistema ──
+.DS_Store
+
+# ── NOTA sobre el índice ──
+# chroma_db/ y data/processed/bm25_corpus.json SÍ se suben (los necesita el
+# servicio para arrancar). Si prefieres no versionar el índice (36 MB),
+# descomenta las dos líneas siguientes y transfiérelo al servidor por separado:
+# chroma_db/
+# data/processed/

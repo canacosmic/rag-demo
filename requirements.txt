@@ -1,0 +1,29 @@
+# requirements.txt — versiones probadas (las que por fin funcionaron).
+# Las 4 fijadas abajo son CRÍTICAS: desalinearlas reproduce los cuelgues/errores
+# de dependencias. No las cambies sin motivo.
+transformers==4.44.2
+tokenizers==0.19.1
+FlagEmbedding==1.2.11
+chromadb==1.5.9
+
+# Resto del stack RAG
+peft
+torch
+rank-bm25
+openai
+python-dotenv
+pandas
+numpy
+tenacity
+tqdm
+
+# Solo para re-ingestar PDFs (no se usa en runtime del servicio)
+pymupdf4llm
+
+# Servidor
+fastapi
+uvicorn[standard]
+
+# NOTA: para un lock exacto, en tu venv que YA funciona corre:
+#   python -m pip freeze > requirements.lock.txt
+# y usa ese archivo en el servidor. Garantiza el mismo entorno bit a bit.
