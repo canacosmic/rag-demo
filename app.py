@@ -77,7 +77,7 @@ async def health():
     return {"status": "ok", "chunks": STATE["collection"].count()}
 
 
-@app.post("/preguntar", response_model=Respuesta)
+@app.post("/chat", response_model=Respuesta)
 async def preguntar(body: Pregunta):
     """
     Recibe la pregunta de un paciente y devuelve la respuesta del sistema.
